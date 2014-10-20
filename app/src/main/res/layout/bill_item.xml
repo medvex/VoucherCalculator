@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sub_layout_bill"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <EditText
+        android:id="@+id/edit_bill_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom|right"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        android:maxWidth="120dp"
+        android:minWidth="60dp"
+        android:text="@string/default_num_value"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:attr/editTextColor" />
+
+    <Button
+        android:id="@+id/button_remove_bill"
+        style="@android:style/Widget.Holo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="@string/minus_sign"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/text_bill_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_bill_value"
+        android:layout_toRightOf="@+id/edit_bill_value"
+        android:gravity="center_vertical"
+        android:text="@string/currency"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

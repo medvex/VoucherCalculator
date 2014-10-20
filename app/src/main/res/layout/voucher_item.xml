@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sub_layou_voucher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/edit_voucher_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom|right"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:maxWidth="100dp"
+        android:minWidth="60dp"
+        android:nextFocusForward="@+id/edit_voucher_amount"
+        android:nextFocusRight="@id/edit_voucher_amount"
+        android:text="@string/default_num_value"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@id/edit_voucher_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/text_voucher_currency"
+        android:gravity="bottom|right"
+        android:inputType="number"
+        android:maxLength="3"
+        android:maxLines="1"
+        android:maxWidth="80dp"
+        android:text="@string/default_num_value"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button_remove_voucher"
+        style="@android:style/Widget.Holo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/minus_sign"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@id/text_voucher_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/edit_voucher_value"
+        android:layout_toRightOf="@id/edit_voucher_value"
+        android:gravity="center_vertical"
+        android:text="@string/currency"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/text_voucher_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/edit_voucher_amount"
+        android:layout_toRightOf="@id/edit_voucher_amount"
+        android:gravity="center_vertical"
+        android:text="@string/pieces"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/checkbox_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_remove_voucher"
+        android:layout_toLeftOf="@+id/button_remove_voucher"
+        android:checked="true"
+        android:gravity="center_vertical"
+        android:text="@string/checkbox" />
+
+</RelativeLayout>

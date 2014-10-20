@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Voucher Calculator</string>
+    <string name="minus_sign">-</string>
+    <string name="clear_sign">x</string>
+    <string name="zero_vouchers">Your vouchers?</string>
+    <string name="nonzero_vouchers">Vouchers total: %1$s Kč.</string>
+    <string name="zero_bill">What\'s the bill?</string>
+    <string name="nonzero_bill">Bill total: %1$s Kč.</string>
+    <string name="overpay">Overpaying: %1$s Kč.</string>
+    <string name="underpay">Pay cash: %1$s Kč.</string>
+    <string name="dummy_text">dummy text</string>
+    <string name="currency">Kč</string>
+    <string name="default_num_value"></string>
+    <string name="pieces">ks</string>
+    <string name="checkbox">Auto</string>
+    <string name="add_item">+ item</string>
+    <string name="add_voucher">+ voucher</string>
+
+</resources>
