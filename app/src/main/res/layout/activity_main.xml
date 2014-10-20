@@ -1,11 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
-    style="@android:style/TextAppearance.Widget.TextView.SpinnerItem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    style="@style/AppBaseTheme">
 
     <RelativeLayout
         android:id="@+id/top_summary_layout"
@@ -23,27 +23,20 @@
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/divider_top"
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:layout_below="@id/top_summary_layout"
-        android:background="#3b5998" />
-
     <ScrollView
         android:id="@+id/middle_scrolling_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/divider_bottom"
-        android:layout_below="@id/divider_top" >
+        android:layout_below="@id/top_summary_layout"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_above="@+id/bottom_buttons_layout">
 
         <LinearLayout
-            android:id="@+id/LinearLayout1"
+            android:id="@+id/scrolling_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="?android:attr/listDivider"
-            android:orientation="vertical"
-            android:showDividers="middle" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/bill_wrapper"
@@ -94,32 +87,31 @@
         </LinearLayout>
     </ScrollView>
 
-    <View
-        android:id="@id/divider_bottom"
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:layout_above="@+id/bottom_buttons_layout"
-        android:background="#3b5998" />
-
     <LinearLayout
         android:id="@+id/bottom_buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentRight="false"
+        android:visibility="visible"
+        android:divider="#ff61ff74">
 
         <Button
             android:id="@+id/button_add_bill"
-            style="@android:style/Widget.Holo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/add_item"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/AppBaseTheme"
+            android:enabled="false" />
 
         <Button
             android:id="@+id/button_add_voucher"
-            style="@android:style/Widget.Holo"
-            android:layout_width="0dp"
+            android:layout_width="15dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/add_voucher"
