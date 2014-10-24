@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".MainActivity"
-    style="@style/AppBaseTheme">
+    style="@style/Theme.AppCompat.Light.NoActionBar">
 
     <RelativeLayout
         android:id="@+id/top_summary_layout"
